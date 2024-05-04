@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -13,7 +15,9 @@
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed"
   },
+  "homepage": "https://Mahmoud-D.github.io/trillo",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "vite": "^4.3.9"
   },
   "dependencies": {
